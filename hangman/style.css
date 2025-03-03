@@ -53,10 +53,22 @@
             font-weight: 800;
         }
 
+        .game-box h4 {
+            color: #3f2256;
+            font-size: 25px;
+        }
+
+        .game-box h4 span {
+            color: #6e2fa0;
+            font-size: 25px;
+        }
+
+
 
 
         h1 {
             color: #5a5467;
+  
         }
 
         button {
