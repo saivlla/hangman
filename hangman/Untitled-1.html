@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
     <head>
-        <title> Hang Man </title>
+        <title>Hangman</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel ="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="game-modal">
@@ -14,51 +14,28 @@
                 <button id="play-again" class="play-again">Play Again</button>
             </div>
         </div>
-    
+
         <div id="container">
             <h1>Hangman Game</h1>
             <div id="hangman-box" class="hangmanbox">
-            <img src="img0.jpg" id="img" alt=" "> 
-                        </div>
+                <img src="img0.jpg" id="img" alt="Hangman Image">
+            </div>
             <div id="game-box" class="game-box">
                 <ul id="display" class="word-display"></ul>
-                <div class="letterGuessed">
-                    <span id="letter1"> _ </span>
-                    <span id="letter2"> _ </span>
-                    <span id="letter3"> _ </span>
-                    <span id="letter4"> _ </span>
-                    <span id="letter5"> _ </span>
-                </div>
                 <h4 id="hint" class="hint-text"><b>Hint:</b> <span></span></h4>
-                <h4 id="incorrect-guess" class="guesses-text"><b>Incorrect Guesses:</b> <span> 0 / 5 </span></h4>      
-                </div>
-                <div id="keyboard" class="keyboard"></div>
-                
-                </script>
+                <h4 id="incorrect-guess" class="guesses-text"><b>Incorrect Guesses:</b> <span> 0 / 5 </span></h4>
             </div>
-            <script>
-            function keyButtons() {
-                let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
-                     `
-                      <button
-                      class="button"
-                      id='` + letter + `'
-                     onClick="handleGuess('` + letter + `')"
-                     >
-                      ` + letter + `
-                      </button>
-                    `).join('');
-                    document.getElementById('keyboard').innerHTML = buttonsHTML;
-                  }  
-              
-                  keyButtons();
-                </script>
-                
-            <script src ="script.js"> </script>
-        
-            
+            <div id="keyboard" class="keyboard"></div> 
+        </div>
+
+        <!-- Include script.js to handle game logic -->
+        <script src="script.js"></script>
     </body>
-</html> 
+</html>
+  
 
 
+        <script src="script.js"></script>
+    </body>
 
+   
