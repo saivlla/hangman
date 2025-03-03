@@ -30,17 +30,35 @@
                     <span id="letter5"> _ </span>
                 </div>
                 <h4 id="hint" class="hint-text"><b>Hint:</b> <span></span></h4>
-                <h4 id="incorrect-guess" class="guesses-text"><b>Incorrect Guesses:</b> <span></span></h4>      
+                <h4 id="incorrect-guess" class="guesses-text"><b>Incorrect Guesses:</b> <span> 0 / 5 </span></h4>      
                 </div>
                 <div id="keyboard" class="keyboard"></div>
-              
-
-
+                
                 </script>
             </div>
+            <script>
+            function keyButtons() {
+                let buttonsHTML = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
+                     `
+                      <button
+                      class="button"
+                      id='` + letter + `'
+                     onClick="handleGuess('` + letter + `')"
+                     >
+                      ` + letter + `
+                      </button>
+                    `).join('');
+                    document.getElementById('keyboard').innerHTML = buttonsHTML;
+                  }  
+              
+                  keyButtons();
+                </script>
+                
             <script src ="script.js"> </script>
         
             
     </body>
 </html> 
+
+
 
